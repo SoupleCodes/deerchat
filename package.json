@@ -4,7 +4,7 @@
   "description": "Just a client.",
   "scripts": {
     "start": "parcel public/index.html",
-    "build": "parcel build public/index.html",
+    "build": "parcel build public/index.html --dist-dir dist --public-url /deerchat",
     "deploy": "npm run build && git subtree push --prefix dist origin gh-pages"
   },
   "keywords": [],
