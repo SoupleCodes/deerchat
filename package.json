@@ -1,13 +1,10 @@
 {
-  "name": "furrchat",
+  "name": "deerchat",
   "version": "1.0.0",
   "description": "Just a client.",
   "scripts": {
-    "start": "parcel home.html",
-    "clean": "rimraf dist",
-    "build-index": "parcel build index.html --dist-dir dist --public-url /deerchat",
-    "build-home": "parcel build home.html --dist-dir dist --public-url /deerchat",
-    "build": "npm run clean && npm run build-index && npm run build-home",
+    "start": "parcel public/index.html",
+    "build": "parcel build public/index.html",
     "deploy": "npm run build && git subtree push --prefix dist origin gh-pages"
   },
   "keywords": [],

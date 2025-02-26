@@ -56,15 +56,15 @@ function createPost(post) {
   return `
   <div class="post" post_id="${post.id}">
     <div class="post-profilepicture">
-      <img src=${post.author.avatar || `./assets/default.png`}>
+      <img src=${post.author.avatar || `/assets/default.png`}>
     </div>
     <div>
       <div>
         <span class="post-replies">
-        ${postReplies}
+          ${postReplies}
         </span>
         <span class="post-displayname">
-          <a class="profile-link" href="/profile?user=${post.author.username}">
+          <a href="/profile?user=${post.author.username}" class="profile-link">
             ${post.author.display_name} 
           </a>
           <span class="post-username">
@@ -79,7 +79,7 @@ function createPost(post) {
         </span>
       </div>
       <div>
-        <a post_id="${post.id}" class="reply-link">Reply</a>
+        <a href="" post_id="${post.id}" class="reply-link">Reply</a>
         <span class="post-timestamp">
         &#183;	${convertedToTimeStamp.toLocaleString()}
         </span>
