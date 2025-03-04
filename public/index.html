@@ -22,16 +22,22 @@
   </div>
   <div id="content">
     <div id="home-page" class="page active">
-      <div id="post-textarea"><textarea required id="commentbox" name="commentbox" placeholder=" Write Something..."></textarea></div>
-      <div style="display: flex;">
-        <div id="replies_details" style="text-align:center; flex-grow:1;"></div>
-      <div>
-        <button>Emojis</button>
-        <button id="send-button">Post</button>
+      <div id="ulist"></div>
+      <div id="post-textarea" style="margin-bottom:0;">
+        <textarea required id="commentbox" name="commentbox" placeholder=" Write Something..."></textarea>
       </div>
-      </div>    
+      <div style="display: flex; align-items: center; padding-bottom: 1em;">
+        <div style="display: flex; align-items: center; justify-content: start; flex-grow:1;">
+          <button id="attach-btn">Post Attachment URL</button>
+        <div id="replies_details" style="text-align:center; flex-grow:1;"></div>
+      </div>
+        <div style="display: flex; align-items: center; justify-content: end;">
+          <button>Emojis</button>
+          <button id="send-button">Post</button>
+        </div>
+      </div>
       <div id="post-container"></div>
-    </div>
+    </div>    
     <div id="login-page" class="page">
     </div>
     <div id="profile-page" class="page">

@@ -4,10 +4,12 @@ import MarkdownIt from 'markdown-it';
 
 let ws, user
 let replies = []
+let attachmentURls = []
 let replies_details = document.getElementById('replies_details');
 
 if (!localStorage.getItem('token')) { window.location.hash = '#login' }
 function clearReplies() { replies = [], replies_details.innerHTML = `` }
+function clearAttachmentURls() { attachmentURls = [] }
 
 function getUserCredentials() {
     const d = JSON.parse(localStorage.getItem('userData')) || {};
@@ -28,6 +30,21 @@ export function handleNewPost(post) {
     const postsContainer = document.getElementById('post-container');
     const postHtml = createPost(post);
     postsContainer.innerHTML = postHtml + postsContainer.innerHTML;
+}
+
+export function handleUlist(ulist) {
+    const ulistElement = document.getElementById('ulist');
+    const users = Object.keys(ulist).map(u => {
+        return `<a class="profile-link" href="#profile?user=${u}">${u}</a>`
+    }).join(', ');
+    const userCount = Object.keys(ulist).length
+    let ulistHtml;
+        if (userCount > 1) { 
+        ulistHtml = `(${userCount}) Users: ${users}`;
+    } else {
+        ulistHtml = `You are the only user online :(`
+    }
+    ulistElement.innerHTML = ulistHtml + `<br/>`;
 }
 
 const u = getUserCredentials();
@@ -51,11 +68,12 @@ function sendPost() {
             command: "post",
             content: message.value,
             replies: replies,
-            attachments: [],
+            attachments: attachmentURls,
         });
         ws.send(postCommand);
         message.value = "";
         clearReplies();
+        clearAttachmentURls();
     } else {
         console.error("WebSocket connection is not open.");
     }
@@ -113,6 +131,15 @@ contentDiv.addEventListener("click", (event) => {
         clearReplies();
     }
 });
+
+const attachButton = document.getElementById('attach-btn')
+attachButton ? document.querySelector("#attach-btn").onclick = (event) => {
+    event.preventDefault()
+    let result = prompt("Attach a file? (Enter a URL):")
+    if (result) {
+        attachmentURls.push(result)
+    }
+} : null;
 
 function loadHomePage() {
     const sendButton = document.getElementById("send-button");
@@ -242,5 +269,5 @@ function loadLoginPage() {
         ws.onerror = function (error) { console.error("WebSocket error:", error) }
         ws.onclose = function (event) { console.log("WebSocket connection closed:", event) }
     }
-}
+    }
 }

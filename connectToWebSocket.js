@@ -1,4 +1,4 @@
-import { handlePosts, handleNewPost } from './loadCorrectPage.js';
+import { handlePosts, handleNewPost, handleUlist } from './loadCorrectPage.js';
 
 export function connectToWebSocket(u, p) {
     return new Promise((resolve, reject) => {
@@ -33,7 +33,7 @@ export function connectToWebSocket(u, p) {
                             handleNewPost(r.data);
                             break;
                         case 'ulist':
-                            console.log('Received user list:', r.ulist);
+                            handleUlist(r.ulist);
                             break;
                         case 'error':
                             console.error('Error:', r);

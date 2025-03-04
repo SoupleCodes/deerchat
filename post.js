@@ -8,7 +8,12 @@ function createPost(post) {
 
   const convertedToTimeStamp = new Date(post.created * 1000);
   let message = xss((post.content));
-  const md = MarkdownIt();
+  const md = MarkdownIt({ 
+    breaks: true,
+    langPrefix:   'language-', 
+    typographer:  false,
+  });
+  
   message = md.renderInline(message);
   message = message
   .replace(/\[b](.*?)\[\/b]/g, '<strong>$1</strong>') // bold
