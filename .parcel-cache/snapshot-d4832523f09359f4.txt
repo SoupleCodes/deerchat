@@ -1,18 +1,17 @@
 5041
-38/home/user/furrchat/loadCorrectPage.js1740578616507043686 0
+38/home/user/furrchat/loadCorrectPage.js1741116860234637979 0
 27/home/user/furrchat/post.js1739826831385047636 0
-41/home/user/furrchat/connectToWebSocket.js1739822316172222243 0
+41/home/user/furrchat/connectToWebSocket.js1741117137736959986 0
 29/home/user/furrchat/README.md1738951945609810291 0
-43/home/user/furrchat/dist/Inbox.83cd06a7.png1740579399056105753 0
-47/home/user/furrchat/dist/TornPaper.eab8245b.png1740579399057105827 0
-46/home/user/furrchat/dist/Settings.853cca39.png1740579399056105753 0
-45/home/user/furrchat/dist/Profile.372f72ab.png1740579399056105753 0
-43/home/user/furrchat/dist/index.8d96b06f.css1740579399058105901 0
-57/home/user/furrchat/dist/PatrickHand-Regular.2cee910e.ttf1740579399086107979 0
-46/home/user/furrchat/dist/index.61923e20.js.map1740579399135111615 0
+43/home/user/furrchat/dist/Inbox.83cd06a7.png1741117320338990448 0
+47/home/user/furrchat/dist/TornPaper.eab8245b.png1741117320341990679 0
+46/home/user/furrchat/dist/Settings.853cca39.png1741117320339990525 0
+45/home/user/furrchat/dist/Profile.372f72ab.png1741117320335990218 0
+43/home/user/furrchat/dist/index.8d96b06f.css1741117321343067598 0
+57/home/user/furrchat/dist/PatrickHand-Regular.2cee910e.ttf1741117320348991217 0
 37/home/user/furrchat/package-lock.json1739484217045653518 0
 32/home/user/furrchat/package.json1740579266495270264 0
-36/home/user/furrchat/public/style.css1739827000463154075 0
+36/home/user/furrchat/public/style.css1740584345659122257 0
 53/home/user/furrchat/public/assets/buttons/Profile.png1738951945613810660 0
 54/home/user/furrchat/public/assets/buttons/Settings.png1738951945614810752 0
 41/home/user/furrchat/public/assets/buttons1738951945613810660 1
@@ -281,7 +280,7 @@
 79/home/user/furrchat/node_modules/caniuse-lite/data/features/css-not-sel-list.js1738951952102409235 0
 86/home/user/furrchat/node_modules/caniuse-lite/data/features/css-overscroll-behavior.js1738951952105409512 0
 79/home/user/furrchat/node_modules/caniuse-lite/data/features/css-text-spacing.js1738951952122411081 0
-35/home/user/furrchat/dist/index.html1740579399058105901 0
+35/home/user/furrchat/dist/index.html1741117321341067444 0
 67/home/user/furrchat/node_modules/caniuse-lite/data/features/avif.js1738951952034402962 0
 72/home/user/furrchat/node_modules/caniuse-lite/data/features/classlist.js1738951952046404069 0
 79/home/user/furrchat/node_modules/caniuse-lite/data/features/css-writing-mode.js1738951952129411726 0
@@ -814,7 +813,7 @@
 64/home/user/furrchat/node_modules/lmdb/dependencies/lz4/lib/lz4.h1738951953776563677 0
 68/home/user/furrchat/node_modules/lmdb/dependencies/lz4/lib/lz4file.c1738951953776563677 0
 68/home/user/furrchat/node_modules/lmdb/dependencies/lz4/lib/README.md1738951953767562846 0
-24/home/user/furrchat/dist1740579399137111763 1
+24/home/user/furrchat/dist1741117321413072977 1
 76/home/user/furrchat/node_modules/lmdb/dependencies/lz4/lib/lz4frame_static.h1738951953782564230 0
 69/home/user/furrchat/node_modules/lmdb/dependencies/lz4/lib/lz4frame.c1738951953781564138 0
 84/home/user/furrchat/node_modules/caniuse-lite/data/features/css-media-interaction.js1738951952095408590 0
@@ -832,7 +831,7 @@
 51/home/user/furrchat/node_modules/lmdb/dict/dict.txt1738951953789564876 0
 42/home/user/furrchat/node_modules/lmdb/dict1738951953789564876 1
 59/home/user/furrchat/node_modules/lmdb/util/RangeIterable.js1738951953839569489 0
-46/home/user/furrchat/dist/notebook.fc5b99af.png1740579399056105753 0
+46/home/user/furrchat/dist/notebook.fc5b99af.png1741117320340990602 0
 76/home/user/furrchat/node_modules/lmdb/node_modules/node-addon-api/LICENSE.md1738951953808566629 0
 77/home/user/furrchat/node_modules/lmdb/node_modules/node-addon-api/common.gypi1738951953809566721 0
 86/home/user/furrchat/node_modules/lmdb/node_modules/node-addon-api/package-support.json1738951953819567644 0
@@ -1218,6 +1217,7 @@
 53/home/user/furrchat/node_modules/argparse/argparse.js1738951951986398533 0
 54/home/user/furrchat/node_modules/argparse/package.json1738951951989398810 0
 58/home/user/furrchat/node_modules/balanced-match/LICENSE.md1739483046287017054 0
+46/home/user/furrchat/dist/index.72450f7d.js.map1741117321408072593 0
 67/home/user/furrchat/node_modules/balanced-match/.github/FUNDING.yml1739483046309018269 0
 55/home/user/furrchat/node_modules/balanced-match/.github1739483046305018048 1
 64/home/user/furrchat/node_modules/posthtml-render/dist/index.d.ts1738951954129596244 0
@@ -2191,7 +2191,7 @@
 55/home/user/furrchat/node_modules/js-tokens/package.json1738951952929485533 0
 77/home/user/furrchat/node_modules/@parcel/transformer-postcss/src/constants.js1738951949382158291 0
 64/home/user/furrchat/node_modules/@parcel/transformer-postcss/src1738951949383158384 1
-47/home/user/furrchat/dist/index.8d96b06f.css.map1740579399087108053 0
+47/home/user/furrchat/dist/index.8d96b06f.css.map1741117321361068981 0
 54/home/user/furrchat/node_modules/@parcel/optimizer-css1738951945871834463 1
 59/home/user/furrchat/node_modules/@parcel/fs/src/MemoryFS.js1738951945858833264 0
 63/home/user/furrchat/node_modules/@parcel/core/lib/serializer.js1738951945806828466 0
@@ -2242,7 +2242,7 @@
 78/home/user/furrchat/node_modules/@parcel/optimizer-htmlnano/src/svgMappings.js1738951945873834647 0
 66/home/user/furrchat/node_modules/@parcel/reporter-cli/package.json1738951945914838430 0
 56/home/user/furrchat/node_modules/@parcel/rust/browser.js1738951945972843781 0
-52/home/user/furrchat/dist/Leading trails.1df9e820.png1740579399056105753 0
+52/home/user/furrchat/dist/Leading trails.1df9e820.png1741117320335990218 0
 72/home/user/furrchat/node_modules/@swc/helpers/cjs/_iterable_to_array.cjs1738951951811382388 0
 81/home/user/furrchat/node_modules/string-width-cjs/node_modules/strip-ansi/license1739483046266015895 0
 66/home/user/furrchat/node_modules/lmdb/dependencies/lz4/lib/lz4hc.c1738951953783564323 0
@@ -2706,7 +2706,6 @@
 73/home/user/furrchat/node_modules/@parcel/core/lib/requests/PathRequest.js1738951945804828282 0
 64/home/user/furrchat/node_modules/caniuse-lite/data/regions/UA.js1738951952460442264 0
 63/home/user/furrchat/node_modules/@parcel/node-resolver-core/lib1738951945870834371 1
-42/home/user/furrchat/dist/index.61923e20.js1740579399067106569 0
 69/home/user/furrchat/node_modules/@parcel/core/src/loadParcelPlugin.js1738951945816829389 0
 62/home/user/furrchat/node_modules/htmlparser2/lib/esm/Parser.js1738951952882481197 0
 64/home/user/furrchat/node_modules/caniuse-lite/data/regions/KW.js1738951952402436913 0
@@ -2814,7 +2813,7 @@
 78/home/user/furrchat/node_modules/@parcel/reporter-tracer/lib/TracerReporter.js1738951945948841567 0
 80/home/user/furrchat/node_modules/@swc/helpers/esm/_class_apply_descriptor_get.js1738951951840385064 0
 61/home/user/furrchat/node_modules/@parcel/resolver-default/src1738951945950841751 1
-19/home/user/furrchat1740579398903094400 1
+19/home/user/furrchat1741117314482540461 1
 73/home/user/furrchat/node_modules/@parcel/node-resolver-core/lib/_empty.js1738951945870834371 0
 64/home/user/furrchat/node_modules/@parcel/watcher/src/Debounce.hh1738951949619180157 0
 49/home/user/furrchat/node_modules/clone/.npmignore1738951952528448538 0
@@ -3289,6 +3288,7 @@
 67/home/user/furrchat/node_modules/@parcel/events/src/ValueEmitter.js1738951945849832433 0
 73/home/user/furrchat/node_modules/@parcel/core/test/PackagerRunner.test.js1738951945828830496 0
 83/home/user/furrchat/node_modules/@parcel/core/test/fixtures/config-plugin-not-found1738951945834831049 1
+42/home/user/furrchat/dist/index.72450f7d.js1741117321346067828 0
 82/home/user/furrchat/node_modules/@parcel/source-map/parcel_sourcemap_node/build.rs1738951949319152479 0
 44/home/user/furrchat/node_modules/xss/bin/xss1738951954554635454 0
 59/home/user/furrchat/node_modules/@parcel/utils/src/index.js1738951949535172407 0
@@ -4276,7 +4276,7 @@
 46/home/user/furrchat/node_modules/commander/lib1738951952543449922 1
 110/home/user/furrchat/node_modules/posthtml/node_modules/dom-serializer/node_modules/entities/lib/index.d.ts.map1738951954147597905 0
 56/home/user/furrchat/node_modules/commander/lib/option.js1738951952543449922 0
-42/home/user/furrchat/dist/Logo.75233020.png1740579398959098555 0
+42/home/user/furrchat/dist/Logo.75233020.png1741117320334990141 0
 55/home/user/furrchat/node_modules/commander/lib/error.js1738951952537449368 0
 83/home/user/furrchat/node_modules/@parcel/core/test/fixtures/plugins/local-plugin.js1738951945843831880 0
 57/home/user/furrchat/node_modules/commander/lib/command.js1738951952536449276 0

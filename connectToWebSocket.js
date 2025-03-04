@@ -15,29 +15,38 @@ export function connectToWebSocket(u, p) {
         };
 
         ws.onmessage = (e) => {
-             try {
-            const r = JSON.parse(e.data);
-            if (r.listener === 'RegisterLoginPswdListener' && !r.error) {
-                localStorage.setItem('token', r.token);
-                const d = JSON.parse(localStorage.getItem('userData')) || {};
-                if (d[r.user.username]) { d[r.user.username].token = r.token; }
-                localStorage.setItem('userData', JSON.stringify(d));
-            } else if (r.command === 'greet') {
-                handlePosts(r.messages)
-                r.ulist && console.log('Received user list:', r.ulist);
-            } else if (r.command === 'new_post') {
-                handleNewPost(r.data);
-            } else if (r.command === 'ulist') {
-                console.log('Received user list:', r.ulist);
-            } else if (r.error) {
-                console.error('Error:', r);
-            } else {
-                console.log(r);
+            try {
+                const r = JSON.parse(e.data);
+                if (r.listener === 'RegisterLoginPswdListener' && !r.error) {
+                    localStorage.setItem('token', r.token);
+                    const d = JSON.parse(localStorage.getItem('userData')) || {};
+                    if (d[r.user.username]) { d[r.user.username].token = r.token; }
+                    localStorage.setItem('userData', JSON.stringify(d));
+                } 
+                if (r) {
+                    switch(r.command) {
+                        case 'greet':
+                            handlePosts(r.messages)
+                            r.ulist && console.log('Received user list:', r.ulist);
+                            break;
+                        case 'new_post':
+                            handleNewPost(r.data);
+                            break;
+                        case 'ulist':
+                            console.log('Received user list:', r.ulist);
+                            break;
+                        case 'error':
+                            console.error('Error:', r);
+                            break;
+                        default:
+                            console.log(r);
+                            break; 
+                    }
+                }
+            } catch (e) {
+                console.error('Error parsing JSON:', e);
             }
-        } catch (e) {
-            console.error('Error parsing JSON:', e);
-        }
-    };
+        };
 
         ws.onerror = (e) => {
             console.error('WebSocket error:', e);

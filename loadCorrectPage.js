@@ -62,7 +62,10 @@ function sendPost() {
 }
 
 function showPageFromHash() {
-    const hash = window.location.hash
+    let hash = window.location.hash
+    if (!hash.startsWith('#')) {
+      hash = hash.split('#')[1] || ''
+    }
     const hashParts = hash.split('?');
     const pageId = hashParts[0].substring(1) || "home";
     const query = hashParts[1];
@@ -193,7 +196,7 @@ function loadLoginPage() {
       <br>
       <input type="password" id="password" aria required></input>
       <br>
-      <input type="submit" name="Submit!"></input>
+      <input id="submit" type="submit" name="Submit!"></input>
     </form>
   `;
   
@@ -201,7 +204,7 @@ function loadLoginPage() {
     const loginElement = document.getElementById('login-form');
 
     if (loginElement) {
-    loginElement.onsubmit = function (event) {
+        document.querySelector("#submit").onclick = (event) => {
         event.preventDefault();
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
