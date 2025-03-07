@@ -35,7 +35,14 @@ export function handleNewPost(post) {
 export function handleUlist(ulist) {
     const ulistElement = document.getElementById('ulist');
     const users = Object.keys(ulist).map(u => {
-        return `<a class="profile-link" href="#profile?user=${u}">${u}</a>`
+        const client = ulist[u]
+        let title;
+            if (client === 'DeerChat') {
+                title='This user is using the amazing epic sauce best looking client around... DeerChat!!'
+            } else {
+                title=`This user is using ${client}`
+            }
+        return `<a class="profile-link" href="#profile?user=${u}" title="${title}">${u}</a>`
     }).join(', ');
     const userCount = Object.keys(ulist).length
     let ulistHtml;
@@ -68,7 +75,8 @@ function sendPost() {
             command: "post",
             content: message.value,
             replies: replies,
-            attachments: attachmentURls,
+            attachments: attachmentURls
+            ,
         });
         ws.send(postCommand);
         message.value = "";

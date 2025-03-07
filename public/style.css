@@ -15,6 +15,15 @@ rainbow {
   background-clip: text;
 }
 
+code {
+  font-size: 12px;
+  font-family: 'Inconsolata', monospace;
+  color: lightgreen;
+  background-color: black;
+  text-shadow: 0 0 5px lightgreen;
+  display: inline-block;
+}
+
 .page {
   display: none;
 }
