@@ -35,7 +35,7 @@ export function handleNewPost(post) {
 export function handleUlist(ulist) {
     const ulistElement = document.getElementById('ulist');
     const users = Object.keys(ulist).map(u => {
-        const client = ulist[u]
+        const client = ulist[u].client
         let title;
             if (client === 'DeerChat') {
                 title='This user is using the amazing epic sauce best looking client around... DeerChat!!'
@@ -54,6 +54,7 @@ export function handleUlist(ulist) {
     ulistElement.innerHTML = ulistHtml + `<br/>`;
 }
 
+{
 const u = getUserCredentials();
 if (u) {
     connectToWebSocket(u.username, u.password)
@@ -66,6 +67,7 @@ if (u) {
         });
 } else {
     console.error('User data not found in localStorage.');
+}
 }
 
 function sendPost() {
@@ -128,7 +130,7 @@ contentDiv.addEventListener("click", (event) => {
         const username = new URLSearchParams(url.split('?')[1]).get('user');
         window.location.hash = `#profile?user=${username}`;
     } else if (event.target.matches(".reply-link")) {
-        const postId = Number(event.target.getAttribute('post_id'));
+        const postId = event.target.getAttribute('post_id')
         replies.push(postId);
         replies_details.innerHTML = `${replies.length} Replies - <span class="link" id="clear-replies">Remove All</span>`;
         const removeAll = document.getElementById("clear-replies");
@@ -152,6 +154,13 @@ attachButton ? document.querySelector("#attach-btn").onclick = (event) => {
 function loadHomePage() {
     const sendButton = document.getElementById("send-button");
     if (sendButton) { sendButton.addEventListener("click", sendPost) }
+    const emojiButton = document.getElementById("emoji-button");
+    const emojiSelector = document.getElementById("emoji-table");
+    if (emojiButton && emojiSelector) { 
+        emojiButton.addEventListener("click", () => {
+            emojiSelector.style.display = (emojiSelector.style.display === 'none') ? 'block' : 'none';
+        });
+     }
 }
 
 function loadProfilePage(query) {

@@ -59,7 +59,7 @@ function createPost(post) {
   }
 
   return `
-  <div class="post" post_id="${post.id}">
+  <div class="post" post_id="${post._id}">
     <div class="post-profilepicture">
       <img src=${post.author.avatar || `/assets/default.png`}>
     </div>
@@ -84,7 +84,7 @@ function createPost(post) {
         </span>
       </div>
       <div>
-        <a href="" post_id="${post.id}" class="reply-link">Reply</a>
+        <a href="" post_id="${post._id}" class="reply-link">Reply</a>
         <span class="post-timestamp">
         &#183;	${convertedToTimeStamp.toLocaleString()}
         </span>

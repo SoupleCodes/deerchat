@@ -30,11 +30,13 @@
         <div style="display: flex; align-items: center; justify-content: start; flex-grow:1;">
           <button id="attach-btn">Post Attachment URL</button>
         <div id="replies_details" style="text-align:center; flex-grow:1;"></div>
-      </div>
+        </div>
         <div style="display: flex; align-items: center; justify-content: end;">
-          <button>Emojis</button>
+          <button id="emoji-button" style="width:fit-content">Emojis</button>
           <button id="send-button">Post</button>
         </div>
+      </div>
+      <div id="emojicomponent" style="display: flex; align-items: center; justify-content: end;">
       </div>
       <div id="post-container"></div>
     </div>    
@@ -51,5 +53,6 @@
     </div>
   </div>
   <script type="module" src="../loadCorrectPage.js"></script>
+  <script type="module" src="./components/emojipicker.js">emojiPicker()</script>
 </body>
 </html>
